@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/user", userRouter);
 app.use("/article", articleRouter);
 
-app.listen(3300, async () => {
+app.listen(process.env.PORT, async () => {
   await connection;
   console.log("server started");
 });
